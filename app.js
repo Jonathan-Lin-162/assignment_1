@@ -130,6 +130,10 @@ app.get("/", (req, res) => {
   }
 });
 
+app.get("/ping", (req, res) => {
+  res.status(200).send("Server is alive!");
+});
+
 app.get("/signUp", (req, res) => {
   const folder = getPath(req);
   res.render("signup", {
